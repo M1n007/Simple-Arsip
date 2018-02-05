@@ -41,7 +41,7 @@ tr:nth-child(even) {
       $username = $t['username'];
       $password = $t['password'];
     ?>
-<b>Data Pegawai Bernama <?php echo $nama; ?></b>
+<b>Data Pegawai Bernama <?php echo $nama; ?></b><br><br>
 <table>
     <thead>
       <tr>

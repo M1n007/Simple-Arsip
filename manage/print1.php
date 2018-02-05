@@ -28,7 +28,7 @@ tr:nth-child(even) {
 }
 </style>
 <body>
-<b>Data Semua Pegawai.</b>
+<b>Data Semua Pegawai.</b><br><br>
 <table>
     <thead>
       <tr>
