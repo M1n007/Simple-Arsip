@@ -68,8 +68,7 @@ if (empty($_SESSION['username'])) {
                                 <?php
                               }
                             }else{
-                              $pener = $_SESSION['no_peg'];
-                              $tampilkan = mysqli_query($konek, "select * from surat_masuk where penerima='$pener'");
+                              $tampilkan = mysqli_query($konek, "select * from surat_masuk");
                               if (mysqli_num_rows($tampilkan)==0) {
                                 ?>
                                 <tbody>

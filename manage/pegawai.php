@@ -44,7 +44,10 @@ if (empty($_SESSION['username'])) {
                         <th>Telp</th>
                         <th>Kelamin</th>
                         <th>Aksi</th>
-                        <th><a href="editpeg.php?tambah"><font class="glyphicon glyphicon-plus"></font></a></th>
+                        <th>
+                        <a href="editpeg.php?tambah"><font class="glyphicon glyphicon-plus"></font></a>
+                        <a href="print1.php" class="btn btn-primary"><font class="fa fa-print"> Print All</font></a>
+                        </th>
                       </tr>
                     </thead>
                     <?php

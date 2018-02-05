@@ -12,9 +12,6 @@
                 <i class="fa fa-reply"><i class="fa fa-envelope"></i></i> <span>Add Data Surat Keluar</span>
             </a>
         </li>
-        <?php
-          if ($_SESSION['level'] == 'admin' ) {
-         ?>
         <li>
             <a href="#" data-toggle="modal" data-target="#myMod">
                 <i class="fa fa-share"><i class="fa fa-envelope"></i></i> <span>Add Data Surat Masuk</span>
@@ -25,9 +22,7 @@
               <i class="fa fa-exchange"></i> <span>Disposisikan Surat</span>
             </a>
         </li>
-        <?php
-          }
-         ?>
+
     </ul>
 </section>
 <!-- /.sidebar -->

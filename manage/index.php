@@ -50,6 +50,9 @@ if (empty($_SESSION['username'])) {
                           </a>
                       </div>
                   </div><!-- ./col -->
+                  <?php
+                    }
+                   ?>
                   <div class="col-lg-3 col-xs-6">
                       <!-- small box -->
                       <div class="small-box bg-red">
@@ -85,8 +88,7 @@ if (empty($_SESSION['username'])) {
                           <div class="inner">
                               <h3>
                                 <?php
-                                $pener = $_SESSION['no_peg'];
-                                $tampilkan = mysqli_query($konek, "select * from surat_masuk where penerima='$pener'");{
+                                $tampilkan = mysqli_query($konek, "select * from surat_masuk");{
                                  ?>
                                  <font>
                                    <?php
@@ -107,9 +109,6 @@ if (empty($_SESSION['username'])) {
                           </a>
                       </div>
                   </div><!-- ./col -->
-                  <?php
-                    }
-                   ?>
                   <div class="col-lg-3 col-xs-6">
                       <!-- small box -->
                       <div class="small-box bg-yellow">
