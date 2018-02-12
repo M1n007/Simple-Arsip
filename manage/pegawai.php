@@ -51,7 +51,7 @@ if (empty($_SESSION['username'])) {
                       </tr>
                     </thead>
                     <?php
-                      $query = mysqli_query($konek, "select * from pegawai limit 3");
+                      $query = mysqli_query($konek, "select * from pegawai limit 5");
                            if (mysqli_num_rows($query)==0) {
                                 ?>
                                 <tbody>
