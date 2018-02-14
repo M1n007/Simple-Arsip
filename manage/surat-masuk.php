@@ -36,14 +36,9 @@ if (empty($_SESSION['username'])) {
           <section class="content">
             <div class="row">
                 <div class="">
-                  <a href="index.php" class="btn btn-primary"><font class="fa fa-hand-o-left">Kembali</font></a><br><br>
-                  <form action="" method="get">
-                    <input type="text" name="cari" placeholder="cari berdasarkan judul" />
-                    <button type="submit" class="btn btn-default"><span class="fa fa-search"></span></button>
-                  </form>
                   <div class="panel panel-default table-responsive">
                       <form action="" method="get">
-                        <table class="table table-striped">
+                        <table class="all table table-striped">
                           <thead>
                             <tr>
                               <th>Kode</th>
@@ -58,7 +53,7 @@ if (empty($_SESSION['username'])) {
                             if (isset($_GET['cari'])) {
                               $car = $_GET['cari'];
                               $tampilkan = mysqli_query($konek, "select * from surat_masuk where judul like '%".$car."%'");
-                              if (mysqli_num_rows($tampilkan)==0) {
+                            /*  if (mysqli_num_rows($tampilkan)==0) {
                                 ?>
                                 <tbody>
                                   <t>
@@ -66,10 +61,10 @@ if (empty($_SESSION['username'])) {
                                   </tr>
                                 </tbdoy>
                                 <?php
-                              }
+                              }*/
                             }else{
                               $tampilkan = mysqli_query($konek, "select * from surat_masuk");
-                              if (mysqli_num_rows($tampilkan)==0) {
+                              /*if (mysqli_num_rows($tampilkan)==0) {
                                 ?>
                                 <tbody>
                                   <t>
@@ -77,7 +72,7 @@ if (empty($_SESSION['username'])) {
                                   </tr>
                                 </tbdoy>
                                 <?php
-                              }
+                              }*/
                             }
 
                               while ($r = mysqli_fetch_array($tampilkan)){

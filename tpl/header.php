@@ -8,6 +8,8 @@ require_once '../assets/configuration/konek.php';
     <title>Simple Aplikasi Pengarsipan Surat</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../assets/DataTables/data/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/DataTables/data/css/dataTables.bootstrap.min.css">
     <link href="../assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->

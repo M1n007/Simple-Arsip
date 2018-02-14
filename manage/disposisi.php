@@ -37,7 +37,7 @@ if (empty($_SESSION['username'])) {
             <div class="row">
                 <div class="table-responsive">
                   <form action="" method="get">
-                    <table class="table table-striped">
+                    <table class="all table table-striped">
                       <thead>
                         <tr>
                           <th>No Disposisi</th>
@@ -51,15 +51,6 @@ if (empty($_SESSION['username'])) {
                       <?php
                         $pegawai = $_SESSION['no_peg'];
                         $tampilkan = mysqli_query($konek, "select * from disposisi where penerima='$pegawai'");
-                        if (mysqli_num_rows($tampilkan)==0) {
-                                ?>
-                                <tbody>
-                                  <t>
-                                    <td colspan="7">Belum ada data tersedia.</td>
-                                  </tr>
-                                </tbdoy>
-                      <?php
-                        }
                         {
                           while ($r = mysqli_fetch_array($tampilkan)) {
                        ?>

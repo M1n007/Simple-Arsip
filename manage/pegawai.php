@@ -34,7 +34,7 @@ if (empty($_SESSION['username'])) {
             <div class="row">
                 <div class="table-responsive">
                   <form action="" method="get">
-                  <table class="table table-striped table-hover">
+                  <table id="pegawai" class="table table-striped table-hover">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -44,14 +44,10 @@ if (empty($_SESSION['username'])) {
                         <th>Telp</th>
                         <th>Kelamin</th>
                         <th>Aksi</th>
-                        <th>
-                        <a href="editpeg.php?tambah"><font class="glyphicon glyphicon-plus"></font></a>
-                        <a href="print1.php" class="btn btn-primary"><font class="fa fa-print"> Print All</font></a>
-                        </th>
                       </tr>
                     </thead>
                     <?php
-                      $query = mysqli_query($konek, "select * from pegawai limit 5");
+                      $query = mysqli_query($konek, "select * from pegawai limit 10");
                            if (mysqli_num_rows($query)==0) {
                                 ?>
                                 <tbody>

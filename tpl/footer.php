@@ -1,7 +1,9 @@
 </body>
 <script type="text/javascript" src="../assets/js/jquery.js"></script>
+<script type="text/javascript" src="../assets/DataTables/data/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/DataTables/data/js/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $("#tanggal").datepicker({
@@ -25,6 +27,14 @@
     $("#tanggal4").datepicker({
       dateFormat:'yy-mm-dd',
     });
+  });
+
+  $(document).ready(function(){
+    $("#pegawai").DataTable();
+  });
+
+  $(document).ready(function(){
+    $(".all").DataTable();
   });
 </script>
 </html>
