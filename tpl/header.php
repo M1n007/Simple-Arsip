@@ -10,6 +10,7 @@ require_once '../assets/configuration/konek.php';
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../assets/DataTables/data/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/DataTables/data/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/DataTables/data/css/dataTables.jqueryui.min.css">
     <link href="../assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
