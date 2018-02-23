@@ -1,8 +1,9 @@
 <?php
 define('host', 'localhost');
-define('username', 'root');
-define('password', '');
-define('db_name', 'ps');
+define('username', 'amin');
+define('password', 'coegsekali1');
+define('db_name', 'app_surat');
 
-$konek = NEW mysqli (host,username,password,db_name) or die(mysqli_error());
- ?>
+$konek = NEW mysqli(host, username, password, db_name) or die(mysqli_error());
+
+?>

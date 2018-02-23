@@ -5,15 +5,18 @@
 include 'assets/configuration/konek.php';
 session_start();
 error_reporting(0);
-if ($_SESSION['username']) {
-  header('Location: manage/index.php');
-}
 ?>
-<html>
+
+<?php 
+$quer2 = mysqli_query($konek, "select * from config");
+
+if (mysqli_num_rows($quer2) > 0) {
+  ?>
+  <html>
   <head>
     <title>Simple Aplikasi Pengarsipan Surat</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-  	<!--<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
   </head>
 <body class="body-ingin">
 
@@ -21,7 +24,7 @@ if ($_SESSION['username']) {
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title"><center><font><b><font color="purple"><</font> <font color="#1abc9c">S</font>A<font color="#1abc9c">P</font>S <font color="purple">/></font></b></font></center></h4>
+            <h4 class="modal-title"><center><font><b><font color="purple"><</font> <font color="#1abc9c">S</font>A<font color="#1abc9c">P</font>S <font color="purple">/></font></b></font><br><b>(Simple Aplikasi Pengarsipan Surat)</b></center></h4>
           </div>
           <div class="modal-body">
             <?php
@@ -37,7 +40,7 @@ if ($_SESSION['username']) {
                   $_SESSION['no_peg'] = $coba['no_peg'];
                   header("Location: manage/index.php");
                 }else{
-                  ?><center><font class="alert alert-danger modal-title">Login gagal, periksa kembali informasi login anda.</font></center>
+                  ?><center><font class="alert alert-danger modal-title">Login gagal, username/password salah.</font></center><br>
                   <?php
                 }
               }
@@ -49,38 +52,28 @@ if ($_SESSION['username']) {
               </div>
               <div class="form-group">
                 <label>Password :</label>
-                <input type="text" class="form-control" name="passlog" placeholder="masukan Password..." />
+                <input type="password" class="form-control" name="passlog" placeholder="masukan Password..." />
               </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-success" name="login">Log-In</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Lupa Akun ?</button>
+            <a href="lupa.php" class="btn btn-danger">Lupa Password ?</a>
             </form>
           </div>
         </div>
       </div>
       <br>
-      <center><font>Copyright &copy; <?php echo date('Y'); ?>. Aminudin</font></center>
+      <center><font>Copyright &copy; 2018. <?php $copy = mysqli_query($konek, "select * from config"); $copy1 = mysqli_fetch_array($copy); echo $copy1['copyright'];?></font></center>
   </div>
 
-<!-- tampilan popup -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button><br>
-        </div>
-        <div class="modal-body">
-          Contact Administrator untuk mengatasi masalah anda saat login.
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" data-dismiss="modal">Ok</button>
-        </div>
-    </div>
-  </div>
-</div>
 
 </body>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 </html>
+  <?php
+}else{
+  echo "<script>window.location.href='regis.php';</script>";
+}
+
+ ?>

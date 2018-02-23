@@ -41,7 +41,7 @@ require_once '../assets/configuration/konek.php';
                           <!-- Menu Footer-->
                           <li class="user-footer">
                             <div class="pull-left">
-                                <a href="ubah.php" class="btn btn-default btn-flat">Ubah Password</a>
+                                <a href="ubah.php" class="btn btn-default btn-flat">Profile</a>
                             </div>
                               <div class="pull-right">
                                   <a href="logout.php" class="btn btn-default btn-flat">Log Out</a>

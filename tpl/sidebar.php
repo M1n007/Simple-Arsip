@@ -22,6 +22,11 @@
               <i class="fa fa-exchange"></i> <span>Disposisikan Surat</span>
             </a>
         </li>
+        <li>
+            <a href="#" data-toggle="modal" data-target="#myAbout">
+              <i class="fa fa-user"></i> <span>About</span>
+            </a>
+        </li>
 
     </ul>
 </section>

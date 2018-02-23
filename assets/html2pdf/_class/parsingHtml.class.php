@@ -280,7 +280,6 @@ class HTML2PDF_parsingHtml
         if ($str!='') $tmp[] = array('txt', $str);
         unset($str);
     }
-
     /**
      * analise a HTML tag
      *

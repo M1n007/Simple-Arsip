@@ -3420,7 +3420,6 @@ if (!defined('__CLASS_HTML2PDF__')) {
 
             return true;
         }
-
         /**
          * tag : BR
          * mode : OPEN

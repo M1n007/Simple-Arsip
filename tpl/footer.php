@@ -34,8 +34,8 @@
     $("#pegawai").DataTable();
   });
 
-  $(document).ready(function(){
-    $(".all").DataTable();
+  $(function () {
+    $("#sad").DataTable();
   });
 </script>
 </html>
